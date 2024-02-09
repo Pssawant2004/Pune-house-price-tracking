@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 data = pd.read_csv('cleaned_data.csv')
-pipe = pickle.load(open('LinearModel.pkl', 'rb'))
+pipe = pickle.load(open('LinearModel.pkl','rb'))
 
 def predict_price(sqft, bath, balcony, location, bhk):
     input_data = pd.DataFrame([[sqft, bath, balcony, location, bhk]], columns=['total_sqft', 'bath', 'balcony', 'site_location', 'bhk'])
